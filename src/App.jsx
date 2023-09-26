@@ -5,6 +5,10 @@ function App() {
   const [task, setTask] = useState("");
   const [tasks, setTasks] = useState([]);
 
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+  });
+
   const handleAdd = () => {
     if (task) {
       let _tasks = tasks.slice();
